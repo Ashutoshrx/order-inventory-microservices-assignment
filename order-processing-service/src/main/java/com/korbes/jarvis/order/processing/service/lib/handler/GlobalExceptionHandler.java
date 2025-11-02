@@ -3,6 +3,7 @@ package com.korbes.jarvis.order.processing.service.lib.handler;
 import com.korbes.jarvis.order.processing.service.lib.error.ErrorResponse;
 import com.korbes.jarvis.order.processing.service.lib.error.ValidatorError;
 import com.korbes.jarvis.order.processing.service.lib.exceptions.KorbesNotFoundException;
+import com.korbes.jarvis.order.processing.service.lib.exceptions.KorbesServiceRunTimeException;
 import com.korbes.jarvis.order.processing.service.lib.exceptions.KorbesValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +27,14 @@ public class GlobalExceptionHandler {
             localDateTime(LocalDateTime.now()).message(exception.getMessage())
             .details(String.valueOf(exception)).build();
     return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+  }
+
+  @ExceptionHandler(KorbesServiceRunTimeException.class)
+  public ResponseEntity<?> handleInsuranceNotFoundException(KorbesServiceRunTimeException exception) {
+    ErrorResponse errorResponse = ErrorResponse.builder().
+            localDateTime(LocalDateTime.now()).message(exception.getMessage())
+            .details(String.valueOf(exception)).build();
+    return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
   @ExceptionHandler(KorbesValidationException.class)

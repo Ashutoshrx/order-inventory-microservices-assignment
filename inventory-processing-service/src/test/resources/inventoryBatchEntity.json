@@ -1,0 +1,10 @@
+{
+  "id": 101,
+  "batchNumber": "VC-C3",
+  "quantityAvailable": 400,
+  "expiryDate": null,
+  "product": {
+    "productId": 1,
+    "productName": "Vitamin C 1000mg"
+  }
+}

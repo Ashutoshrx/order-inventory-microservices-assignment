@@ -1,0 +1,23 @@
+[
+  {
+    "productName": "Vitamin C 1000mg",
+    "productDescription": "Immune system booster",
+    "batchNumber": "VC-C3",
+    "expiryDate": null,
+    "quantityAvailable": 400
+  },
+  {
+    "productName": "Vitamin C 1000mg",
+    "productDescription": "Immune system booster",
+    "batchNumber": "VC-C2",
+    "expiryDate": null,
+    "quantityAvailable": 1
+  },
+  {
+    "productName": "Vitamin C 1000mg",
+    "productDescription": "Immune system booster",
+    "batchNumber": "VC-C1",
+    "expiryDate":null,
+    "quantityAvailable": 44
+  }
+]

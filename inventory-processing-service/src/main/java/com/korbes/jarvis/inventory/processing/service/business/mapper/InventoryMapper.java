@@ -12,6 +12,7 @@ public interface InventoryMapper {
   InventoryMapper INSTANCE = Mappers.getMapper(InventoryMapper.class);
 
   @Mapping(target = "productName", source = "product.productName")
+  @Mapping(target = "productId", source = "product.productId")
   @Mapping(target = "productDescription", source = "product.productDescription")
   @Mapping(target = "batchNumber", source = "batchNumber")
   @Mapping(target = "expiryDate", source = "expiryDate")

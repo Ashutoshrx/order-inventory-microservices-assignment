@@ -1,6 +1,7 @@
 package com.korbes.jarvis.inventory.processing.service.dto;
 
 import jakarta.validation.constraints.NotNull;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,6 +9,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@Builder
 public class InventoryUpdateRequestDTO implements Serializable {
   private Long productId;
   @NotNull(message = "quantity is mandatory")

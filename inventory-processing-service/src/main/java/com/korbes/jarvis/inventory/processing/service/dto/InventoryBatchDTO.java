@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class InventoryBatchDTO implements Serializable {
+  private Long productId;
   private String productName;
   private String productDescription;
   private String batchNumber;
